@@ -20,6 +20,18 @@ body {
     padding: 20px;
 }
 
+code {
+    background: #efefef;
+    border-radius: 4px;
+    color: #444;
+    font-family: 'Input Mono', Consolas, Monaco, 'Courier New', monospace;
+}
+
+code {
+    display: inline-block;
+    padding: 3px 6px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -77,6 +89,16 @@ h6 {
 }
 
 strong { font-weight: bold; }
+
+h3 strong {
+    font-style: italic;
+    color: #666;
+}
+
+h3 code {
+    border: 2px solid #01a9b4;
+}
+
 em { font-style: italic; }
 ul { list-style-type: circle; }
 ol { list-style-type: decimal; }
@@ -118,10 +140,12 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 }
 
 .questionCount {
-    font-size: 14px;
+    font-size: 22px;
     font-style: italic;
+    color: #01a9b4;
 }
 .questionCount span {
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -131,6 +155,7 @@ ol.questions {
 }
 ol.questions li {
     margin-left: 0;
+    margin-bottom: 10px;
 }
 
 /*.question {
@@ -167,28 +192,41 @@ ul.responses li.correct p span {
     .quizResults h3 {
         margin: 0;
     }
+    .quizResults h3 strong {
+        color: #000;
+    }
     .quizResults h3 span {
         font-weight: normal;
         font-style: italic;
     }
-    .quizLevel {
+    h3.quizLevel {
+        margin-top: 10px;
         padding: 0.5em;
         border-radius: 8px;
     }
     .quizResults .level1,
     .quizResults .level2 {
-        background: #a8d683;
+        background: #efefef; 
+        border: 2px solid #a8d683; 
     }
     .quizResults .level3,
     .quizResults .level4,
     .quizResults .level5 {
-        background: #ff8486;        
+        background: #efefef; 
+        border: 2px solid #ff8486;      
     }
     .quizResults a {
         color: #333;
     }
     .quizResultsCopy {
         margin-top: 20px;
+    }
+    .quizScore {
+        font-size: 22px;
+    }
+
+    .quizResultsCopy ul {
+        padding-left: 20px;
     }
 
 @media screen and (max-width: 800px) {
@@ -205,4 +243,18 @@ ul.responses li.correct p span {
         footer nav a {
             margin-bottom: 0;
         }
+
+    ul.answers {
+        margin-left: 0px;
+    }
+        .answers label {
+            padding-left: 0.5em;
+        }
+}
+
+@media screen and (min-width: 801px) {
+
+    h3 code {
+        margin-top: 10px;
+    }
 }
